@@ -14,11 +14,13 @@ pwm.start(0)
 #脉冲比换算公式
 def math(d):
     return 10 / max * d +2.5
-
-pwm.ChangeDutyCycle(math(180))#转到90度
-time.sleep(1)
 pwm.ChangeDutyCycle(math(0))#转到0度
 time.sleep(1)
+pwm.ChangeDutyCycle(math(90))#转到90度
+time.sleep(1)
+pwm.ChangeDutyCycle(math(180))#转到180度
+time.sleep(1)
+
 GPIO.cleanup()#释放所以引脚
 
 
